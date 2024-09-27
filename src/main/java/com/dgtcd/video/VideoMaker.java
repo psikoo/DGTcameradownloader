@@ -12,7 +12,7 @@ import net.bramp.ffmpeg.*;
 import net.bramp.ffmpeg.builder.*;
 import net.bramp.ffmpeg.job.FFmpegJob;
 
-public class VideoMaker implements Runnable { //TODO fully redo with a wrapper pls kill me
+public class VideoMaker implements Runnable {
     public static ScheduledExecutorService statusChecker;
     public static FFmpegJob job;
     @Override
@@ -25,7 +25,6 @@ public class VideoMaker implements Runnable { //TODO fully redo with a wrapper p
             System.out.println("> Number of files detected: "+numberOfFiles);
             try {
                 FFmpeg ffmpeg = new FFmpeg(System.getProperty("user.dir")+"\\lib\\ffmpeg\\ffmpeg.exe");
-                FFprobe ffprobe = new FFprobe(System.getProperty("user.dir")+"\\lib\\ffmpeg\\");
                 File dir = new File("C:\\ProgramData\\dgtcd\\assets\\videos\\"+DirEncode.dirEncode(VideoPage.cameraURL));
                 if (!dir.exists()){
                     dir.mkdirs();
@@ -46,13 +45,7 @@ public class VideoMaker implements Runnable { //TODO fully redo with a wrapper p
                 statusChecker = Executors.newScheduledThreadPool(1);
                 Runnable statusCheckerRunnable = new VideoStatusChecker();
                 long timeDelay = 5;
-                statusChecker.scheduleAtFixedRate(statusCheckerRunnable, 1,timeDelay, TimeUnit.SECONDS);
-
-
-                
-                
-
-                
+                statusChecker.scheduleAtFixedRate(statusCheckerRunnable, 1,timeDelay, TimeUnit.SECONDS);    
             } catch (IOException e) { e.printStackTrace(); }
         } else { System.out.println("> NO PHOTOS IN THE GIVEN DIRECTORY <"); }
     }
