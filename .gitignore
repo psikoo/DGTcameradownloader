@@ -1,5 +1,6 @@
 #custom
 /target
+/lib
 
 # Compiled class file
 *.class
