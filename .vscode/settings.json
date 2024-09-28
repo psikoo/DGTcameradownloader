@@ -9,4 +9,5 @@
     "cSpell.words": [
         "Cstart"
     ],
+    "java.compile.nullAnalysis.mode": "automatic",
 }
