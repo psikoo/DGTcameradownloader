@@ -117,7 +117,7 @@
             </execution>
           </executions>
           <configuration>
-            <executable>.\maven.cmd</executable>
+            <executable>.\mavenInstall.cmd</executable>
             <workingDirectory>${basedir}</workingDirectory>
             <environmentVariables>
               <LANG>en_US</LANG>
