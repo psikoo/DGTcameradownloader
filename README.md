@@ -12,7 +12,7 @@ Known issues that will not be fixed, there is a hard coded limit of 10000 photos
 
 **Build information:**
 
-This project uses Maven as its build tool for Java. To build from source,  you must install Maven.
+This project uses Maven as its build tool for Java. To build from source  you must install Maven.
 
 **Build steps:**
 
