@@ -6,8 +6,6 @@ import org.apache.commons.lang3.StringUtils;
 
 public class Main {
     public static void main(String[] args) {
-        // TODO add controls to go to the next photo in IMG popup
-        // TODO allow to set framerate
         new Install(); // Create directories "C:\ProgramData\dgtcd"
         CustomHCTheme.setup(); // Set look and feel "/resources/assets/themes/CustomHCTheme.theme.json"
         //2 launch parameters

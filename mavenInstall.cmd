@@ -1,6 +1,5 @@
 echo off
 set workingDir=%cd%
-echo %workingDir%
 echo.
 echo #--------------------------------#
 echo ^| Starting maven automated setup ^|
