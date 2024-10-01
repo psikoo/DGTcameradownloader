@@ -25,7 +25,7 @@ public class PhotoDeleteDuplicates {
 
     public static void renamePhotos(String cameraID) {
         int counter = 0;
-        for(int i=0; i<10000; i++) { //TODO set to a reasonable number
+        for(int i=0; i<10000; i++) {
             if((new File("C:\\ProgramData\\dgtcd\\assets\\photos\\"+cameraID+"\\"+i+".jpg")).exists()) {
                 File oldName = new File("C:\\ProgramData\\dgtcd\\assets\\photos\\"+cameraID+"\\"+i+".jpg");
                 File newName = new File("C:\\ProgramData\\dgtcd\\assets\\photos\\"+cameraID+"\\"+counter+".jpg");

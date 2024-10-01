@@ -35,7 +35,7 @@ public class VideoMaker implements Runnable {
                     .addExtraArgs("-loglevel", "panic", "-framerate", "1") //set framerate
                     .addInput("C:\\ProgramData\\dgtcd\\assets\\photos\\"+DirEncode.dirEncode(VideoPage.cameraURL)+"\\%d.jpg")
                     //.addExtraArgs("-r", "1") // test if this flag works to change framerate
-                    .addOutput("output.mp4")
+                    .addOutput("C:\\ProgramData\\dgtcd\\assets\\videos\\"+System.currentTimeMillis()+".mp4")
                     .done();
                 System.out.println("> Executing ffmpeg command, this could take a while (do not close the app)");
                 FFmpegExecutor executor = new FFmpegExecutor(ffmpeg);

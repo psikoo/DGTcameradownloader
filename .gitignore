@@ -1,6 +1,7 @@
 #custom
 /target
 /lib
+.vscode
 output.mp4
 
 # Compiled class file
